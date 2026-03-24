@@ -24,6 +24,13 @@ public class BookingRequestQueue {
         requestQueue.offer(reservation);
         System.out.println("Booking request added for " + reservation.getGuestName());
     }
+    public Reservation getNextRequest() {
+        return requestQueue.poll();
+    }
+
+    public boolean isEmpty() {
+        return requestQueue.isEmpty();
+    }
 
     /** Display queued requests */
     public void displayRequests() {
